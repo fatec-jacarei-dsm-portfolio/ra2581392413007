@@ -1,63 +1,159 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pamela – Portfólio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio – Pamela</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+    /* Reset básico */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
     header {
-      background: #4a90e2;
-      color: #fff;
-      padding: 20px;
+      background: linear-gradient(135deg, #4a90e2, #5cc1ff);
+      color: white;
       text-align: center;
+      padding: 60px 20px 40px;
+      position: relative;
     }
-    main {
-      max-width: 600px;
-      margin: 40px auto;
+
+    header img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      position: absolute;
+      bottom: -70px;
+      left: 50%;
+      transform: translateX(-50%);
       background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
-      margin-top: 0;
+
+    main {
+      max-width: 900px;
+      margin: 100px auto 40px;
+      padding: 0 20px;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
-    li {
-      margin: 10px 0;
-    }
-    a {
-      text-decoration: none;
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+      text-align: center;
       color: #4a90e2;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .about {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 10px auto;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #4a90e2;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #eaeaea;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 500px) {
+      header {
+        padding: 40px 20px 80px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <!-- Substitua a URL abaixo por uma imagem hospedada no próprio repositório ou em outro local -->
+    <img src="foto-perfil.jpg" alt="Foto de Pamela">
     <h1>Pamela</h1>
-    <p>Idade: 28 anos</p>
-    <p>Analista de Geoprocessamento & Desenvolvedora em formação</p>
+    <p>28 anos – Analista de Geoprocessamento & Desenvolvedora em formação</p>
   </header>
+
   <main>
-    <h2>Projetos no GitHub</h2>
-    <ul>
-      <li><a href="https://github.com/TechWizards-Tech/DSM-1" target="_blank">DSM-1</a></li>
-      <li><a href="https://github.com/TechWizards-Tech/DSM-2" target="_blank">DSM-2</a></li>
-      <li><a href="https://github.com/TechWizards-Tech/HALF-WIZARDS---DSM-3" target="_blank">HALF-WIZARDS – DSM-3</a></li>
-    </ul>
+    <section class="about">
+      <h2>Sobre mim</h2>
+      <p>
+        Sou profissional com 10 anos de experiência em tecnologia geoespacial,
+        atuando nos setores ambiental e de agronegócio. Tenho foco em
+        desenvolvimento de software multiplataforma e integração com
+        geoprocessamento, buscando criar soluções inovadoras para análise
+        e visualização de dados.
+      </p>
+    </section>
+
+    <section>
+      <h2>Projetos no GitHub</h2>
+      <div class="projects">
+        <div class="card">
+          <a href="https://github.com/TechWizards-Tech/DSM-1" target="_blank">DSM-1</a>
+          <p>Primeiro projeto do curso DSM, com foco em fundamentos de desenvolvimento web.</p>
+        </div>
+        <div class="card">
+          <a href="https://github.com/TechWizards-Tech/DSM-2" target="_blank">DSM-2</a>
+          <p>Segundo projeto, abordando práticas avançadas em desenvolvimento full-stack.</p>
+        </div>
+        <div class="card">
+          <a href="https://github.com/TechWizards-Tech/HALF-WIZARDS---DSM-3" target="_blank">HALF-WIZARDS – DSM-3</a>
+          <p>Terceiro projeto em equipe, com ênfase em integração de APIs e design responsivo.</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    © 2025 Pamela – Portfólio
+  </footer>
 </body>
 </html>
+
