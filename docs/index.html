@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio – Pamela</title>
   <style>
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
@@ -14,13 +13,13 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f2f5;
+      background: #eaf9f7; /* fundo claro verde-água */
       color: #333;
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #4a90e2, #5cc1ff);
+      background: linear-gradient(135deg, #27c2b5, #4ce0d2); /* verde-água degradê */
       color: white;
       text-align: center;
       padding: 60px 20px 40px;
@@ -56,7 +55,7 @@
       font-size: 1.8rem;
       margin: 40px 0 20px;
       text-align: center;
-      color: #4a90e2;
+      color: #27c2b5;
     }
 
     .about {
@@ -77,30 +76,32 @@
     }
 
     .card {
+      display: block; /* faz o link ocupar todo o card */
       background: #fff;
       border-radius: 12px;
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      text-decoration: none; /* remove sublinhado do link */
+      color: #333;          /* texto padrão */
     }
 
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      background: #d8f6f3;  /* destaque verde-água claro */
     }
 
-    .card a {
-      text-decoration: none;
-      color: #4a90e2;
-      font-weight: bold;
-      font-size: 1.1rem;
+    .card h3 {
+      color: #27c2b5;
+      margin-bottom: 10px;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      background: #eaeaea;
+      background: #c9f1ec;
       font-size: 0.9rem;
       color: #555;
     }
@@ -114,7 +115,6 @@
 </head>
 <body>
   <header>
-    <!-- Substitua a URL abaixo por uma imagem hospedada no próprio repositório ou em outro local -->
     <img src="foto-perfil.jpg" alt="Foto de Pamela">
     <h1>Pamela</h1>
     <p>28 anos – Analista de Geoprocessamento & Desenvolvedora em formação</p>
@@ -135,18 +135,18 @@
     <section>
       <h2>Projetos no GitHub</h2>
       <div class="projects">
-        <div class="card">
-          <a href="https://github.com/TechWizards-Tech/DSM-1" target="_blank">DSM-1</a>
+        <a class="card" href="https://github.com/TechWizards-Tech/DSM-1" target="_blank">
+          <h3>DSM-1</h3>
           <p>Primeiro projeto do curso DSM, com foco em fundamentos de desenvolvimento web.</p>
-        </div>
-        <div class="card">
-          <a href="https://github.com/TechWizards-Tech/DSM-2" target="_blank">DSM-2</a>
+        </a>
+        <a class="card" href="https://github.com/TechWizards-Tech/DSM-2" target="_blank">
+          <h3>DSM-2</h3>
           <p>Segundo projeto, abordando práticas avançadas em desenvolvimento full-stack.</p>
-        </div>
-        <div class="card">
-          <a href="https://github.com/TechWizards-Tech/HALF-WIZARDS---DSM-3" target="_blank">HALF-WIZARDS – DSM-3</a>
+        </a>
+        <a class="card" href="https://github.com/TechWizards-Tech/HALF-WIZARDS---DSM-3" target="_blank">
+          <h3>HALF-WIZARDS – DSM-3</h3>
           <p>Terceiro projeto em equipe, com ênfase em integração de APIs e design responsivo.</p>
-        </div>
+        </a>
       </div>
     </section>
   </main>
