@@ -5,110 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio – Pamela Freitas</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #eaf9f7;
-      color: #333;
-      line-height: 1.6;
-    }
-
-header {
-  background: linear-gradient(135deg, #27c2b5, #4ce0d2);
-  color: white;
-  text-align: center;
-  padding: 60px 20px 40px; /* altura menor porque não precisamos compensar */
-}
-
-header img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  box-shadow: 0 0 12px rgba(0,0,0,0.3);
-  margin-top: -70px; /* opcional: para sobrepor um pouco ao fundo */
-  background: #fff;
-  position: relative; /* <<< importante: tira o absolute */
-}
-
-    main {
-      max-width: 900px;
-      margin: 60px auto 40px;
-      padding: 0 20px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-top: 80px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin: 40px 0 20px;
-      text-align: center;
-      color: #27c2b5;
-    }
-
-    .about {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .about p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 10px auto;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      display: block;
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-      text-decoration: none;
-      color: #333;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      background: #d8f6f3;
-    }
-
-    .card h3 {
-      color: #27c2b5;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #c9f1ec;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    @media (max-width: 500px) {
-      header {
-        padding: 120px 20px 80px;
-      }
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #eaf9f7; color: #333; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #27c2b5, #4ce0d2); color: white; text-align: center; padding: 60px 20px 40px; }
+    header img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 12px rgba(0,0,0,0.3); margin-top: -70px; background: #fff; position: relative; }
+    main { max-width: 900px; margin: 60px auto 40px; padding: 0 20px; }
+    h1 { font-size: 2.5rem; margin-top: 80px; margin-bottom: 10px; }
+    h2 { font-size: 1.8rem; margin: 40px 0 20px; text-align: center; color: #27c2b5; }
+    .about { text-align: center; margin-bottom: 40px; }
+    .about p { font-size: 1.1rem; max-width: 700px; margin: 10px auto; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { display: block; background: #fff; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s, background 0.2s; text-decoration: none; color: #333; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); background: #d8f6f3; }
+    .card h3 { color: #27c2b5; margin-bottom: 10px; }
+    footer { text-align: center; padding: 30px; background: #c9f1ec; font-size: 0.9rem; color: #555; }
+    @media (max-width: 500px) { header { padding: 120px 20px 80px; } }
   </style>
 </head>
 <body>
@@ -133,17 +44,24 @@ header img {
     <section>
       <h2>Projetos no GitHub</h2>
       <div class="projects">
-        <a class="card" href="https://github.com/TechWizards-Tech/DSM-1" target="_blank">
+        <a class="card" href="https://github.com/TechWizards-Tech/DSM-1" target="_blank" rel="noopener noreferrer">
           <h3>DSM-1</h3>
           <p>Primeiro projeto do curso DSM, com foco em fundamentos de desenvolvimento web.</p>
         </a>
-        <a class="card" href="https://github.com/TechWizards-Tech/DSM-2" target="_blank">
+
+        <a class="card" href="https://github.com/TechWizards-Tech/DSM-2" target="_blank" rel="noopener noreferrer">
           <h3>DSM-2</h3>
           <p>Segundo projeto, abordando práticas avançadas em desenvolvimento full-stack.</p>
         </a>
-        <a class="card" href="https://github.com/TechWizards-Tech/HALF-WIZARDS---DSM-3" target="_blank">
+
+        <a class="card" href="https://github.com/TechWizards-Tech/HALF-WIZARDS---DSM-3" target="_blank" rel="noopener noreferrer">
           <h3>HALF-WIZARDS – DSM-3</h3>
           <p>Terceiro projeto em equipe, com ênfase em integração de APIs e design responsivo.</p>
+        </a>
+
+        <a class="card" href="https://github.com/TechWizards-Tech/TECH-WIZARDS-DSM-4" target="_blank" rel="noopener noreferrer">
+          <h3>TECH-WIZARDS — DSM-4</h3>
+          <p>Quarto projeto do curso DSM, com foco em práticas colaborativas e integrações.</p>
         </a>
       </div>
     </section>
@@ -154,5 +72,3 @@ header img {
   </footer>
 </body>
 </html>
-
-
